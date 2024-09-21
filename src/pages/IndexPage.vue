@@ -1,47 +1,47 @@
 <template>
-  <q-page padding>
-<!--    <q-btn @click="access">{{ button }}</q-btn>-->
-    <q-btn @click="btnUser.access">{{ btnUser.button }}</q-btn>
-    <div>
-      <label>Token: </label>
-      <p>{{ btnUser.token }}</p>
+  <q-page padding  class="home-insert">
+    <div class="info texto_centrado">
+      <h3 class="justify-center">Home</h3>
     </div>
-    <div>
-      <label>expiresIn: </label>
-      <p>{{ btnUser.expiresIn }}</p>
+    <add-link/>
+    <div class="list-links">
+      <list-link v-for="(index, item) in useUrl.links" :key="item" :link="index" :item="item"/>
     </div>
-    <q-form v-if="btnUser.token != ''">
-      <q-input v-model="btnUser.longLink" />
-      <q-btn @click="btnUser.createLink">Ingresar</q-btn>
-    </q-form>
+    <div class="q-pa-lg flex flex-center">
+    <q-pagination
+      v-if="btnUser.token"
+      v-model="useUrl.current"
+      :max="useUrl.size"
+      direction-links
+      @update:model-value="useUrl.onPageChange"
+    />
+  </div>
   </q-page>
 </template>
 
 <script>
 import {defineComponent, ref} from 'vue';
-import { ButtonUser } from "stores/bundle";
+import {ButtonUser, useUrlStore} from "stores/bundle";
+import AddLink from "components/AddLink.vue";
+import ListLink from "pages/ListLink.vue";
 
 export default defineComponent({
   name: 'IndexPage',
   components: {
-    // ButtonUser
+    AddLink,
+    ListLink
   },
   data() {
     return {
-      button: ref('ingresar'),
-      counter: 0,
-      btnUser: ButtonUser()
+      useUrl: useUrlStore(),
+      btnUser: ButtonUser(),
+      addLink: AddLink,
+      listLink: ListLink
     }
   },
-  methods: {
-    access() {
-      // console.log('Click realizado!');
-      this.counter++;
-      this.button = ref(`ingresar ${this.counter}`);
-    }
-  },
+  methods: {},
   mounted() {
-    this.btnUser.refreshToken();
+    if (this.btnUser.token) this.useUrl.loadLink();
   }
 });
 </script>

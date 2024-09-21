@@ -60,7 +60,10 @@ module.exports = configure(function (/* ctx */) {
 
       // publicPath: '/',
       // analyze: true,
-      // env: {},
+      env: {
+        FRONT_URI: "http://localhost:9000/",
+        BACK_URI: "http://localhost:4050"
+      },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
@@ -100,7 +103,7 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Notify', 'Dialog']
     },
 
     // animations: 'all', // --- includes all animations

@@ -1,0 +1,69 @@
+body{
+  background: #e1e1e1;
+}
+
+.Buttons-start {
+  display: flex;
+  grid-gap: .5rem;
+}
+
+.login-insert {
+  width: 30rem;
+  margin: 5rem auto;
+  .info {
+    h3 {
+      font-size: 3rem;
+      font-weight: 500;
+      font-family: $Aclonica;
+    }
+  }
+}
+
+.home-insert {
+  width: 80%;
+  margin: 2rem auto;
+  .info {
+    h3 {
+      font-size: 3.5rem;
+      font-family: $Merienda;
+      font-weight: 600;
+    }
+  }
+  .list-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+
+    .link-card {
+      width: 100%;
+
+      .my-card {
+        margin: 16px;
+        width: 100%;
+        height: -webkit-fill-available;
+      }
+      .btn-card {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        .text-info {
+          width: 100%;
+        }
+
+        //.text-h6 {
+        //  word-wrap: break-word;
+        //  width: 80%;
+        //}
+        //
+        //.text-subtitle2 {
+        //  word-wrap: break-word;
+        //  width: 80%;
+        //  text-decoration: none; /* Opcional: elimina el subrayado del enlace */
+        //  //color: blue; /* Cambia el color del enlace si lo deseas */
+        //  display: block;
+        //}
+      }
+    }
+  }
+}

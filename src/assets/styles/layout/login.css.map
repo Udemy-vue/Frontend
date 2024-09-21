@@ -1,0 +1,1 @@
+{"version":3,"sources":["layout/login.scss","layout/login.css"],"names":[],"mappings":"AAAA,cACE,WCCF","file":"login.css","sourcesContent":[".login-insert {\n  margin: 2rem;\n}\n",".login-insert {\n  margin: 2rem;\n}"]}
