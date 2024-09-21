@@ -1,5 +1,5 @@
 <template>
-  <q-page padding  class="home-insert">
+  <q-page padding class="home-insert">
     <div class="info texto_centrado">
       <h3 class="justify-center">Home</h3>
     </div>

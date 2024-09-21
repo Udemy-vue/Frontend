@@ -74,10 +74,9 @@ export const ButtonUser = defineStore('button', {
     counter: ref(false),
     token: ref(''),
     expiresIn: ref(0),
-    // longLink: ref(''),
-    email: ref('penelope@test.com'),
-    password: ref('123123'),
-    Rpassword: ref('123123'),
+    email: ref(''),
+    password: ref(''),
+    Rpassword: ref(''),
     router: useRouter(),
   }),
 
@@ -191,6 +190,7 @@ export const useUrlStore = defineStore('url',  {
         privateUser()._showNotif(
           'top',
           {message: 'Link Registrado', type: 'info', icon: 'add_circle'});
+        this.resetUser();
       } catch (e) {
         console.log(e.response.data || e);
       }
