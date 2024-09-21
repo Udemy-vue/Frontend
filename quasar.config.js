@@ -62,7 +62,8 @@ module.exports = configure(function (/* ctx */) {
       // analyze: true,
       env: {
         FRONT_URI: "http://localhost:9000/",
-        BACK_URI: "http://localhost:4050"
+        BACK_URI1: "http://localhost:4050",
+        BACK_URI2: "https://backend-5q0m.onrender.com"
       },
       // rawDefine: {}
       // ignorePublicFolder: true,

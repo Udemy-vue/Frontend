@@ -8,7 +8,8 @@ import axios from 'axios'
 // "export default () => {}" function below (which runs individually
 // for each client)
 // const link = 'http://localhost:4050'
-const link = process.env.BACK_URI;
+const link = process.env.BACK_URI2;
+console.log(link);
 const nano = axios.create({
   baseURL: `${link}/nano/`
 });

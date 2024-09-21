@@ -17,11 +17,11 @@ const imagemingif = require('imagemin-gifsicle');
 const fs = require('fs');
 
 const paths = {
-  scss: 'build/scss/**/*.scss',
-  js: 'build/js/**/*.js',
-  imagenes: 'build/img/**/*',
-  gif: 'build/Gif/**/*.gif',
-  order: 'build/js/data.json'
+  scss: 'builds/scss/**/*.scss',
+  js: 'builds/js/**/*.js',
+  imagenes: 'builds/img/**/*',
+  gif: 'builds/Gif/**/*.gif',
+  order: 'builds/js/data.json'
 }
 
 const step = {
@@ -69,7 +69,7 @@ function readOrder() {
 function javascript() {
   const order = readOrder();
 
-  return src(order.map(file => `build/js/${file}`))
+  return src(order.map(file => `builds/js/${file}`))
     .pipe(jshint())
     .pipe(concat('bundle.js'))
     .pipe(sourcemaps.init())

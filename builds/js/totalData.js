@@ -74,9 +74,10 @@ export const ButtonUser = defineStore('button', {
     counter: ref(false),
     token: ref(''),
     expiresIn: ref(0),
-    email: ref(''),
-    password: ref(''),
-    Rpassword: ref(''),
+    // longLink: ref(''),
+    email: ref('penelope@test.com'),
+    password: ref('123123'),
+    Rpassword: ref('123123'),
     router: useRouter(),
   }),
 
