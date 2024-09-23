@@ -10,7 +10,7 @@ import axios from 'axios'
 // const link = 'http://localhost:4050'
 // const link = process.env.BACK_URI1;
 const link = process.env.BACK_URI;
-console.log(link);
+// console.log(link);
 const nano = axios.create({
   baseURL: `${link}/nano/`
 });

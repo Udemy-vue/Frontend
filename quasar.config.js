@@ -61,7 +61,7 @@ module.exports = configure(function ( ctx ) {
       // publicPath: '/',
       // analyze: true,
       env: {
-        FRONT_URI: ctx.dev ? "http://localhost:9000/" : "",
+        FRONT_URI: ctx.dev ? "http://localhost:9000/" : "https://almacen-links.netlify.app",
         BACK_URI: ctx.dev ? "http://localhost:4050" : "https://backend-5q0m.onrender.com"
       },
       // rawDefine: {}
