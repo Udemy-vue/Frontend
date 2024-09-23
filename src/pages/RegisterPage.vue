@@ -12,7 +12,7 @@
         filled
         v-model="btnUser.email"
         label="Link *"
-        type="text"
+        type="email"
         lazy-rules
         :rules="[
           val => val && val.length > 0 || 'Email obligatorio'
