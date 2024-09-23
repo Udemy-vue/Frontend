@@ -12,7 +12,7 @@
 const { configure } = require('quasar/wrappers');
 
 
-module.exports = configure(function (/* ctx */) {
+module.exports = configure(function ( ctx ) {
   return {
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
     // preFetch: true,
@@ -61,9 +61,8 @@ module.exports = configure(function (/* ctx */) {
       // publicPath: '/',
       // analyze: true,
       env: {
-        FRONT_URI: "http://localhost:9000/",
-        BACK_URI1: "http://localhost:4050",
-        BACK_URI2: "https://backend-5q0m.onrender.com"
+        FRONT_URI: ctx.dev ? "http://localhost:9000/" : "",
+        BACK_URI: ctx.dev ? "http://localhost:4050" : "https://backend-5q0m.onrender.com"
       },
       // rawDefine: {}
       // ignorePublicFolder: true,
